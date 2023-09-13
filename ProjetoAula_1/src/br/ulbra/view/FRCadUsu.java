@@ -4,6 +4,8 @@
  */
 package br.ulbra.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author beeme
@@ -27,23 +29,31 @@ public class FRCadUsu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtNome = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txtDataDeNascimento = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jPasswordField3 = new javax.swing.JPasswordField();
+        txtSenha = new javax.swing.JPasswordField();
+        chkAtivo = new javax.swing.JCheckBox();
+        txtRepetirSenha = new javax.swing.JPasswordField();
+        BtSalvar = new javax.swing.JButton();
+        BtCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/salvar.png"))); // NOI18N
+        jButton1.setText("SALVAR");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setAlwaysOnTop(true);
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 255));
@@ -59,25 +69,25 @@ public class FRCadUsu extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("CADASTRO DE USUÁRIO:");
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
+        txtNome.setBackground(new java.awt.Color(255, 255, 255));
+        txtNome.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtNome.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("E-MAIL:");
 
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
+        txtEmail.setBackground(new java.awt.Color(255, 255, 255));
+        txtEmail.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtEmail.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("DATA DE NASCIMENTO:");
 
-        jTextField3.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(0, 0, 0));
+        txtDataDeNascimento.setBackground(new java.awt.Color(255, 255, 255));
+        txtDataDeNascimento.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtDataDeNascimento.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
@@ -87,57 +97,76 @@ public class FRCadUsu extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("REPETIR SENHA:");
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/salvar.png"))); // NOI18N
-        jButton1.setText("SALVAR");
+        txtSenha.setBackground(new java.awt.Color(255, 255, 255));
+        txtSenha.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtSenha.setForeground(new java.awt.Color(0, 0, 0));
 
-        jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
-        jPasswordField1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jPasswordField1.setForeground(new java.awt.Color(0, 0, 0));
-
-        jCheckBox1.setBackground(new java.awt.Color(153, 153, 255));
-        jCheckBox1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jCheckBox1.setForeground(new java.awt.Color(0, 0, 0));
-        jCheckBox1.setText("ATIVO");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        chkAtivo.setBackground(new java.awt.Color(153, 153, 255));
+        chkAtivo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        chkAtivo.setForeground(new java.awt.Color(0, 0, 0));
+        chkAtivo.setText("ATIVO");
+        chkAtivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                chkAtivoActionPerformed(evt);
             }
         });
 
-        jPasswordField3.setBackground(new java.awt.Color(255, 255, 255));
-        jPasswordField3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jPasswordField3.setForeground(new java.awt.Color(0, 0, 0));
+        txtRepetirSenha.setBackground(new java.awt.Color(255, 255, 255));
+        txtRepetirSenha.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtRepetirSenha.setForeground(new java.awt.Color(0, 0, 0));
+
+        BtSalvar.setBackground(new java.awt.Color(255, 255, 255));
+        BtSalvar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        BtSalvar.setForeground(new java.awt.Color(0, 0, 0));
+        BtSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/salvar.png"))); // NOI18N
+        BtSalvar.setText("SALVAR");
+        BtSalvar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtSalvarMouseClicked(evt);
+            }
+        });
+
+        BtCancelar.setBackground(new java.awt.Color(255, 255, 255));
+        BtCancelar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        BtCancelar.setForeground(new java.awt.Color(0, 0, 0));
+        BtCancelar.setText("CANCELAR");
+        BtCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtCancelarMouseClicked(evt);
+            }
+        });
+        BtCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(chkAtivo, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDataDeNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel6)
+                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel6)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(102, 102, 102)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(102, 102, 102)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtRepetirSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addComponent(jButton1)))
+                        .addComponent(BtSalvar)
+                        .addGap(18, 18, 18)
+                        .addComponent(BtCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -150,27 +179,29 @@ public class FRCadUsu extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtDataDeNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox1)
+                .addComponent(chkAtivo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtRepetirSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtCancelar)
+                    .addComponent(BtSalvar))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -179,8 +210,9 @@ public class FRCadUsu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(16, 16, 16))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,9 +224,54 @@ public class FRCadUsu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void chkAtivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkAtivoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_chkAtivoActionPerformed
+
+    private void BtCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtCancelarActionPerformed
+
+    private void BtSalvarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtSalvarMouseClicked
+        if (verificarCampos()) {
+            return;
+        }
+    }//GEN-LAST:event_BtSalvarMouseClicked
+
+     private boolean verificarCampos() {
+        if (txtNome.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Campo 'nome' em branco");
+            return false;
+        }
+        if (!txtNome.getText().matches("^[\\p{L} ]+$")){
+            JOptionPane.showMessageDialog(null, "Campo 'nome' possui caracteres invalidos");
+            return false;
+        }
+        if (txtEmail.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Campo 'email' em branco");
+            return false;
+        }
+        if (!txtEmail.getText().matches("^[a-zA-Z._]@[a-zA-Z._]+")){
+            JOptionPane.showMessageDialog(null, "Campo 'email' possui caracteres invalidos");
+            return false;
+        }
+         if (!txtDataDeNascimento.getText().matches("^[0-9]{2}/[0-9]{2}/[0-9]{4}")){
+            JOptionPane.showMessageDialog(null, "Campo 'email' possui caracteres invalidos"+"Ex: 01/01/2000");
+            return false;
+        }
+         char[] senha = txtSenha.getPassword();
+         if(new String(senha).length() < 8) {
+            JOptionPane.showMessageDialog(null, "Campo 'Senha' deve ser maior que 8 caracteres");
+            return false;
+         }
+         
+        
+        return true;
+    }
+     
+    private void BtCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtCancelarMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_BtCancelarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -232,8 +309,10 @@ public class FRCadUsu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtCancelar;
+    private javax.swing.JButton BtSalvar;
+    private javax.swing.JCheckBox chkAtivo;
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -242,10 +321,10 @@ public class FRCadUsu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField txtDataDeNascimento;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtNome;
+    private javax.swing.JPasswordField txtRepetirSenha;
+    private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
 }
