@@ -88,7 +88,7 @@
                           <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" pref="67" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="txtRepetirSenha" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                      <Component id="txtRSenha" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="BtSalvar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -127,7 +127,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="txtRepetirSenha" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtRSenha" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="BtCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -282,7 +282,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkAtivoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="txtRepetirSenha">
+        <Component class="javax.swing.JPasswordField" name="txtRSenha">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
