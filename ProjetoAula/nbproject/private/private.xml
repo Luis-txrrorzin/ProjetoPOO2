@@ -7,5 +7,12 @@
             <file>file:/C:/Users/beeme/Documents/NetBeansProjects/ProjetoAula/src/br/ulbra/controller/UsuarioController.java</file>
             <file>file:/C:/Users/beeme/Documents/NetBeansProjects/ProjetoAula/src/br/ulbra/model/UsuarioDAO.java</file>
         </group>
+        <group name="POO 2">
+            <file>file:/C:/Users/Sheila/Documents/GitHub/ProjetoPOO2/ProjetoAula/src/br/ulbra/view/FRUpdTre.java</file>
+            <file>file:/C:/Users/Sheila/Documents/GitHub/ProjetoPOO2/ProjetoAula/src/br/ulbra/model/UsuarioDAO.java</file>
+            <file>file:/C:/Users/Sheila/Documents/GitHub/ProjetoPOO2/ProjetoAula/src/br/ulbra/model/TreinoDAO.java</file>
+            <file>file:/C:/Users/Sheila/Documents/GitHub/ProjetoPOO2/ProjetoAula/src/br/ulbra/model/Treino.java</file>
+            <file>file:/C:/Users/Sheila/Documents/GitHub/ProjetoPOO2/ProjetoAula/src/br/ulbra/view/FRConTre.java</file>
+        </group>
     </open-files>
 </project-private>

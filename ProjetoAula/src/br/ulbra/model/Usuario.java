@@ -74,6 +74,14 @@ public class Usuario {
                 + ", ativoUsu=" + ativoUsu + ", senhaUsu=" + senhaUsu + '}';
     }
 
+    public void setdata_nascimentoUso(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void setPkUsuario(int usuario_pk) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     
     
     

@@ -43,16 +43,16 @@ public class FRConUsu extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
-        txt.setFont(new java.awt.Font("Segoe UI Historic", 1, 18)); // NOI18N
+        txt.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         txt.setForeground(new java.awt.Color(0, 0, 0));
         txt.setText("Filtro");
 
-        txtConsUsu.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        txtConsUsu.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         txtConsUsu.setForeground(new java.awt.Color(0, 0, 0));
         txtConsUsu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/searchiconbig (2).png"))); // NOI18N
-        txtConsUsu.setText("Consulta de Usuários");
+        txtConsUsu.setText("Consulta de Jogadores");
 
         btLupa.setBackground(new java.awt.Color(153, 153, 153));
         btLupa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/search.png"))); // NOI18N
@@ -64,6 +64,7 @@ public class FRConUsu extends javax.swing.JDialog {
         });
 
         txtFiltro.setBackground(new java.awt.Color(255, 255, 255));
+        txtFiltro.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtFiltro.setForeground(new java.awt.Color(0, 0, 0));
         txtFiltro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -72,6 +73,7 @@ public class FRConUsu extends javax.swing.JDialog {
         });
 
         tabela.setBackground(new java.awt.Color(255, 255, 255));
+        tabela.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         tabela.setForeground(new java.awt.Color(0, 0, 0));
         tabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -91,7 +93,11 @@ public class FRConUsu extends javax.swing.JDialog {
         });
         jScrollPane1.setViewportView(tabela);
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("VOLTAR");
+        jButton1.setBorder(new javax.swing.border.MatteBorder(null));
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -122,8 +128,8 @@ public class FRConUsu extends javax.swing.JDialog {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(55, 55, 55))))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,9 +145,9 @@ public class FRConUsu extends javax.swing.JDialog {
                             .addComponent(txt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(63, 63, 63)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
+                .addGap(38, 38, 38)
                 .addComponent(jButton1)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

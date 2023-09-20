@@ -4,6 +4,9 @@
  */
 package br.ulbra.view;
 
+import br.ulbra.controller.UsuarioController;
+import br.ulbra.model.Usuario;
+import br.ulbra.utils.Utils;
 import javax.swing.JOptionPane;
 
 /**
@@ -56,29 +59,38 @@ public class FRUpdUsu extends javax.swing.JDialog {
         txtRepetirSUsu = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
-        jPanel3.setBackground(new java.awt.Color(153, 255, 153));
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
-        txtUsu.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
+        txtUsu.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         txtUsu.setForeground(new java.awt.Color(0, 0, 0));
         txtUsu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/user.png"))); // NOI18N
-        txtUsu.setText(" Usuário");
+        txtUsu.setText("Jogador");
 
+        LabelNome.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         LabelNome.setForeground(new java.awt.Color(0, 0, 0));
         LabelNome.setText("NOME:");
 
         txtNomeUsu.setEditable(false);
         txtNomeUsu.setBackground(new java.awt.Color(255, 255, 255));
+        txtNomeUsu.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtNomeUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeUsuActionPerformed(evt);
             }
         });
 
+        jLabel18.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("E-MAIL:");
 
         txtEmailUsu.setBackground(new java.awt.Color(255, 255, 255));
+        txtEmailUsu.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtEmailUsu.setForeground(new java.awt.Color(0, 0, 0));
         txtEmailUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,13 +98,16 @@ public class FRUpdUsu extends javax.swing.JDialog {
             }
         });
 
+        jLabel19.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("DATA NASCIMENTO:");
 
+        jLabel20.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("SENHA:");
 
         txtDtNascUsu.setBackground(new java.awt.Color(255, 255, 255));
+        txtDtNascUsu.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtDtNascUsu.setForeground(new java.awt.Color(0, 0, 0));
         txtDtNascUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,9 +116,11 @@ public class FRUpdUsu extends javax.swing.JDialog {
         });
 
         btAlterar.setBackground(new java.awt.Color(255, 255, 255));
+        btAlterar.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         btAlterar.setForeground(new java.awt.Color(0, 0, 0));
         btAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/edit.png"))); // NOI18N
         btAlterar.setText("ALTERAR");
+        btAlterar.setBorder(new javax.swing.border.MatteBorder(null));
         btAlterar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btAlterarMouseClicked(evt);
@@ -111,15 +128,29 @@ public class FRUpdUsu extends javax.swing.JDialog {
         });
 
         btExcluir.setBackground(new java.awt.Color(255, 255, 255));
+        btExcluir.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         btExcluir.setForeground(new java.awt.Color(0, 0, 0));
         btExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/trash.png"))); // NOI18N
         btExcluir.setText("EXCLUIR");
+        btExcluir.setBorder(new javax.swing.border.MatteBorder(null));
+        btExcluir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btExcluirMouseClicked(evt);
+            }
+        });
 
-        AtivoUsu.setBackground(new java.awt.Color(153, 255, 153));
+        AtivoUsu.setBackground(new java.awt.Color(204, 204, 204));
+        AtivoUsu.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         AtivoUsu.setForeground(new java.awt.Color(0, 0, 0));
         AtivoUsu.setText("ATIVO");
+        AtivoUsu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AtivoUsuActionPerformed(evt);
+            }
+        });
 
         txtSenhaUsu.setBackground(new java.awt.Color(255, 255, 255));
+        txtSenhaUsu.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtSenhaUsu.setForeground(new java.awt.Color(0, 0, 0));
         txtSenhaUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,29 +159,35 @@ public class FRUpdUsu extends javax.swing.JDialog {
         });
 
         btVoltar.setBackground(new java.awt.Color(255, 255, 255));
+        btVoltar.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         btVoltar.setForeground(new java.awt.Color(0, 0, 0));
         btVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/backiconnaguentomais.png"))); // NOI18N
         btVoltar.setText("VOLTAR");
+        btVoltar.setBorder(new javax.swing.border.MatteBorder(null));
         btVoltar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btVoltarMouseClicked(evt);
             }
         });
 
+        Txt.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         Txt.setForeground(new java.awt.Color(0, 0, 0));
         Txt.setText("CÓDIGO:");
 
         txtCodigo.setBackground(new java.awt.Color(255, 255, 255));
+        txtCodigo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCodigoActionPerformed(evt);
             }
         });
 
+        txtRSenhaUsu.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         txtRSenhaUsu.setForeground(new java.awt.Color(0, 0, 0));
         txtRSenhaUsu.setText("REPETIR SENHA:");
 
         txtRepetirSUsu.setBackground(new java.awt.Color(255, 255, 255));
+        txtRepetirSUsu.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtRepetirSUsu.setForeground(new java.awt.Color(0, 0, 0));
         txtRepetirSUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,38 +199,38 @@ public class FRUpdUsu extends javax.swing.JDialog {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(146, 146, 146))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                        .addGap(123, 123, 123)
-                        .addComponent(txtUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(AtivoUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(LabelNome, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtNomeUsu)
-                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtDtNascUsu)
-                                .addComponent(txtSenhaUsu))
-                            .addGap(145, 145, 145)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtEmailUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtRSenhaUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtRepetirSUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(LabelNome, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNomeUsu)
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDtNascUsu)
+                            .addComponent(txtSenhaUsu))
+                        .addGap(145, 145, 145)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(Txt, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(txtEmailUsu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtRSenhaUsu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtRepetirSUsu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addComponent(btAlterar)
-                            .addGap(54, 54, 54)
-                            .addComponent(btExcluir)
-                            .addGap(51, 51, 51)
-                            .addComponent(btVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(13, 13, 13))))
-                .addContainerGap(55, Short.MAX_VALUE))
+                                .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(AtivoUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(btAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                        .addComponent(btExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
+                        .addComponent(btVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -210,15 +247,12 @@ public class FRUpdUsu extends javax.swing.JDialog {
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtEmailUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel19))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(AtivoUsu)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtDtNascUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(jLabel19)
+                .addGap(19, 19, 19)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDtNascUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AtivoUsu))
                 .addGap(24, 24, 24)
                 .addComponent(jLabel20)
                 .addGap(18, 18, 18)
@@ -227,12 +261,12 @@ public class FRUpdUsu extends javax.swing.JDialog {
                 .addComponent(txtRSenhaUsu)
                 .addGap(18, 18, 18)
                 .addComponent(txtRepetirSUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btAlterar)
                     .addComponent(btExcluir)
                     .addComponent(btVoltar))
-                .addGap(18, 18, 18))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -305,7 +339,22 @@ public class FRUpdUsu extends javax.swing.JDialog {
     }//GEN-LAST:event_txtDtNascUsuActionPerformed
 
     private void btAlterarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btAlterarMouseClicked
-    
+        if(!verificarCampos()){
+            return;
+        }
+
+        UsuarioController controller = new UsuarioController();
+        String senha = new String(txtSenhaUsu.getPassword());
+        Usuario usuario = new Usuario();
+        usuario.setPkUsuario(usuario_pk);
+        usuario.setNomeUsu(txtNomeUsu.getText());
+        usuario.setEmailUsu(txtEmailUsu.getText());
+        usuario.setdata_nascimentoUso(txtDtNascUsu.getText());
+        usuario.setAtivoUsu(Utils.salvarBoolean(AtivoUsu.isSelected()));
+        usuario.setSenhaUsu(senha);
+        if(controller.alterarUsuario(usuario)){
+            this.dispose();
+        };
     }//GEN-LAST:event_btAlterarMouseClicked
 
     private void txtSenhaUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaUsuActionPerformed
@@ -323,6 +372,36 @@ public class FRUpdUsu extends javax.swing.JDialog {
     private void txtRepetirSUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRepetirSUsuActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtRepetirSUsuActionPerformed
+
+    private void AtivoUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AtivoUsuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AtivoUsuActionPerformed
+
+    private void btExcluirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btExcluirMouseClicked
+        int resposta = JOptionPane.showConfirmDialog(null, "Deseja excluir o usuário?",
+            "Confirmação", JOptionPane.YES_NO_OPTION);
+
+        if (resposta == JOptionPane.YES_OPTION) {
+            UsuarioController controller = new UsuarioController();
+            if(controller.excluirUsuario(usuario_pk)){
+                this.dispose();
+            };
+        }
+    }//GEN-LAST:event_btExcluirMouseClicked
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        UsuarioController controller = new UsuarioController();
+        Usuario usu = controller.readForPk(usuario_pk);
+       
+        String codigo = String.valueOf(usu.getUsuario_pk());
+        txtCodigo.setText(codigo);
+        txtNomeUsu.setText(usu.getNomeUsu());
+        txtEmailUsu.setText(usu.getEmailUsu());
+        txtDtNascUsu.setText(usu.getData_nascimentoUsu());
+        txtSenhaUsu.setText(usu.getSenhaUsu());
+        txtRepetirSUsu.setText(usu.getSenhaUsu());
+        AtivoUsu.setSelected(usu.getAtivoUsu() == 1);
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
