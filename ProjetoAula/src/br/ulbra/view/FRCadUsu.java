@@ -324,7 +324,7 @@ public class FRCadUsu extends javax.swing.JDialog {
         UsuarioController controller = new UsuarioController();
         String senha = new String(txtSenha.getPassword());
         if(controller.adicionarUsuario(txtNome.getText(), txtEmail.getText(), senha, 
-                txtDtNasc.getText(), Utils.salvarBoolean(chkAtivo.isSelected()))){
+                txtDtNasc.getText(), Utils.salvarBoolean(chkAtivo.isSelected()), Imagem.getIcon())){
             this.dispose();
         };
     }//GEN-LAST:event_btSalvarMouseClicked

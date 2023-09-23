@@ -1,5 +1,7 @@
 package br.ulbra.model;
 
+import br.ulbra.utils.Utils;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
@@ -9,6 +11,7 @@ import java.util.logging.Level;
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.Connection;
+import javax.swing.Icon;
 
 
 public class UsuarioDAO {
@@ -33,24 +36,31 @@ public class UsuarioDAO {
     return false;
     }
     
-    public boolean adicionarUsuario(String nome, String email, String senha, String datan, int ativo) {
-        String sql = "INSERT INTO TBUsuario (nomeUsu, emailUsu, senhaUsu, data_nascimentoUsu, ativoUsu)"
-                + "VALUES (?, ?, ?, ?, ?)";
+    public boolean adicionarUsuario(String nome, String email, String senha, String datan, int ativo, Icon icone) {
+        String sql = "INSERT INTO TBUsuario (nomeUsu, emailUsu, senhaUsu, data_nascimentoUsu, ativoUsu, imagenUso)"
+                + "VALUES (?, ?, ?, ?, ?, ?)";
         try {
+            byte[] IconBytes = Utils.iconToBytes(icone);
+            
             PreparedStatement stmt = gerenciador.getConexao().prepareStatement(sql);
             stmt.setString(1, nome);
             stmt.setString(2, email);
             stmt.setString(3, senha);
             stmt.setString(4, datan);
             stmt.setInt(5, ativo);
+            stmt.setBytes(6, IconBytes);
             stmt.executeUpdate();
             JOptionPane.showMessageDialog(null, "Usuário: " + nome + "inserido com sucesso!");
             return true;
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "ERRO: " + e.getMessage());
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "ERRO: " + e.getMessage());
         }  
             return false;
     }
+    
+    
     
     public List<Usuario> read() {
         String sql = "SELECT * FROM  TBUsuario";

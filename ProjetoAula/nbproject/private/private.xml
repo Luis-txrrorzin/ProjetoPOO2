@@ -9,6 +9,8 @@
         </group>
         <group name="POO 2">
             <file>file:/C:/Users/Sheila/Documents/GitHub/ProjetoPOO2/ProjetoAula/src/br/ulbra/view/FRCadUsu.java</file>
+            <file>file:/C:/Users/Sheila/Documents/GitHub/ProjetoPOO2/ProjetoAula/src/br/ulbra/controller/UsuarioController.java</file>
+            <file>file:/C:/Users/Sheila/Documents/GitHub/ProjetoPOO2/ProjetoAula/src/br/ulbra/model/UsuarioDAO.java</file>
             <file>file:/C:/Users/Sheila/Documents/GitHub/ProjetoPOO2/ProjetoAula/src/br/ulbra/utils/Utils.java</file>
         </group>
     </open-files>

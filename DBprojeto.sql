@@ -19,4 +19,5 @@ CREATE TABLE tbtreinos (
     ativoTre TINYINT(1) NOT NULL
 );
 
+alter table tbusuario add imagenUso blob(5242880);
 
