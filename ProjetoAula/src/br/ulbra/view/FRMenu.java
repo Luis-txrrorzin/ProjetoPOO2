@@ -172,7 +172,7 @@ public class FRMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_miSobreActionPerformed
 
     private void MICadueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MICadueActionPerformed
-        
+        new FRCadTre(this, rootPaneCheckingEnabled).setVisible(true);
     }//GEN-LAST:event_MICadueActionPerformed
 
     private void MiConsuTreinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiConsuTreinosActionPerformed

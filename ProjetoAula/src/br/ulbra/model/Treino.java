@@ -61,8 +61,4 @@ public class Treino {
                 + ", descricaoTre=" + descricaoTre + ", dataTre=" + dataTre 
                 + ", ativoTre=" + ativoTre + '}';
     }
-
-    public Object getCodigo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

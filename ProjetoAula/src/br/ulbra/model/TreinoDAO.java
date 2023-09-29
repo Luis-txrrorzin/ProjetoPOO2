@@ -139,33 +139,34 @@ public class TreinoDAO {
     }
 
     public List<Treino> readForDesc(String desc) {
-        String sql = "SELECT * FROM tbtreinos WHERE nomeTre like ?";
-        Connection con = gerenciador.getConexao();
-        PreparedStatement stmt = null;
-        ResultSet rs = null;
-        Treino treino = new Treino();
+    String sql = "SELECT * FROM tbtreinos WHERE nomeTre like ?";
+    Connection con = gerenciador.getConexao();
+    PreparedStatement stmt = null;
+    ResultSet rs = null;
+    List<Treino> treinos = new ArrayList<>();
 
-        try {
-            stmt = con.prepareStatement(sql);
-            stmt.setString(1, "%"+desc+"%");
-            rs = stmt.executeQuery();
+    try {
+        stmt = con.prepareStatement(sql);
+        stmt.setString(1, "%" + desc + "%");
+        rs = stmt.executeQuery();
 
-            while (rs.next()) {
-                
-                treino.setTreino_pk(rs.getInt("treino_pk"));
-                treino.setNomeTre(rs.getString("nomeTre"));
-                treino.setDescricaoTre(rs.getString("descricaoTre"));
-                treino.setDataTre(rs.getString("dataTre"));
-                treino.setAtivoTre(rs.getInt("ativoTre"));
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(TreinoDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            GerenciadorConexao.closeConnection(con, stmt, rs);
+        while (rs.next()) {
+            Treino treino = new Treino();
+            treino.setTreino_pk(rs.getInt("treino_pk"));
+            treino.setNomeTre(rs.getString("nomeTre"));
+            treino.setDescricaoTre(rs.getString("descricaoTre"));
+            treino.setDataTre(rs.getString("dataTre"));
+            treino.setAtivoTre(rs.getInt("ativoTre"));
+            treinos.add(treino);
         }
-
-        return treino;
+    } catch (SQLException ex) {
+        Logger.getLogger(TreinoDAO.class.getName()).log(Level.SEVERE, null, ex);
+    } finally {
+        GerenciadorConexao.closeConnection(con, stmt, rs);
     }
+
+    return treinos;
+}
  
     public Treino readForPk(int pk) {
          String sql = "SELECT * FROM tbusuario WHERE usuario_pk = ?";
@@ -199,32 +200,34 @@ public class TreinoDAO {
     
 
     public boolean alterarTreino(Treino t) {
-        Connection con = gerenciador.getConexao();
-        PreparedStatement stmt = null;
-        
-        try {
-            stmt = con.prepareStatement("UPDATE tbusuario SET nomeusu = ?, " 
-            + "emailUsu = ?, senhaUsu = ?, data_nascimentoUsu = ?, "
-            + "ativoUsu = ? WHERE treino_pk = ?");
-            
-            stmt.setString(1, u.getNomeTre());
-            stmt.setString(2, u.getDescricaoTre());
-            stmt.setString(4, u.getDataTre());
-            stmt.setInt(5, u.getAtivoTre());
-            stmt.setString(6, u.getTreino_pk());
-            
-            stmt.executeUpdate();
-            
+    Connection con = gerenciador.getConexao();
+    PreparedStatement stmt = null;
+
+    try {
+        stmt = con.prepareStatement("UPDATE tbtreino SET nomeTre = ?, descricaoTre = ?, dataTreino = ?, ativoTre = ? WHERE treino_pk = ?");
+
+        stmt.setString(1, t.getNomeTre());
+        stmt.setString(2, t.getDescricaoTre());
+        stmt.setString(3, t.getDataTre());
+        stmt.setInt(4, t.getAtivoTre());
+        stmt.setInt(5, t.getTreino_pk());
+
+        int rowsUpdated = stmt.executeUpdate();
+
+        if (rowsUpdated > 0) {
             JOptionPane.showMessageDialog(null, "Atualizado com sucesso!");
             return true;
-            
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro ao atualizar: " + ex);
-        } finally {
-            GerenciadorConexao.closeConnection(con, stmt);
+        } else {
+            JOptionPane.showMessageDialog(null, "Nenhum registro atualizado.");
         }
-            return false;
-        }
+
+    } catch (SQLException ex) {
+        JOptionPane.showMessageDialog(null, "Erro ao atualizar: " + ex);
+    } finally {
+        GerenciadorConexao.closeConnection(con, stmt);
+    }
+    return false;
+}
     
         public boolean excluirUsuario(int treino_pk) {
            Connection con = gerenciador.getConexao();

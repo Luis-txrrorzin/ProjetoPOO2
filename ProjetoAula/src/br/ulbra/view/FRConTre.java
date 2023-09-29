@@ -171,7 +171,7 @@ public class FRConTre extends javax.swing.JDialog {
         modelo.setNumRows(0);
         TreinoController controller = new TreinoController();
         for (Treino treino : controller.readForDesc(txtFiltro.getText())) {
-            Object[] linha = {treino.getCodigo(),
+            Object[] linha = {treino.getTreino_pk(),
                     treino.getNomeTre(),
                     treino.getDescricaoTre(),
                     treino.getDataTre(),
