@@ -1,12 +1,30 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package br.ulbra.model;
 
 public class Treino {
+    private String nomeTreino;
+    private String descTreino;
     private int treino_pk;
-    private String nomeTre;
-    private String descricaoTre;
-    private String dataTre;
-    private int ativoTre;
+    private int ativoTreino;
+
+    public String getNomeTreino() {
+        return nomeTreino;
+    }
+
+    public void setNomeTreino(String nomeTreino) {
+        this.nomeTreino = nomeTreino;
+    }
+
+    public String getDescTreino() {
+        return descTreino;
+    }
+
+    public void setDescTreino(String descTreino) {
+        this.descTreino = descTreino;
+    }
 
     public int getTreino_pk() {
         return treino_pk;
@@ -16,49 +34,14 @@ public class Treino {
         this.treino_pk = treino_pk;
     }
 
-    public String getNomeTre() {
-        return nomeTre;
+    public int getAtivoTreino() {
+        return ativoTreino;
     }
 
-    public void setNomeTre(String nomeTre) {
-        this.nomeTre = nomeTre;
+    public void setAtivoTreino(int ativoTreino) {
+        this.ativoTreino = ativoTreino;
     }
-
-    public String getDescricaoTre() {
-        return descricaoTre;
-    }
-
-    public void setDescricaoTre(String descricaoTre) {
-        this.descricaoTre = descricaoTre;
-    }
-
-    public String getDataTre() {
-        return dataTre;
-    }
-
-    public void setDataTre(String dataTre) {
-        this.dataTre = dataTre;
-    }
-
-    public int getAtivoTre() {
-        return ativoTre;
-    }
-
-    public void setAtivoTre(int ativoTre) {
-        this.ativoTre = ativoTre;
-    }
-
-    public String ativoToString() {
-        if (this.ativoTre == 1)
-            return "Ativo";
-        else
-            return "Inativo";
-    }
-
-    @Override
-    public String toString() {
-        return "Treino{" + "treino_pk=" + treino_pk + ", nomeTre=" + nomeTre 
-                + ", descricaoTre=" + descricaoTre + ", dataTre=" + dataTre 
-                + ", ativoTre=" + ativoTre + '}';
-    }
+    
+    
+    
 }

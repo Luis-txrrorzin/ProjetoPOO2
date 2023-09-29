@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package br.ulbra.utils;
 
 import java.awt.Graphics2D;
@@ -10,6 +14,10 @@ import javax.imageio.ImageIO;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
+/**
+ *
+ * @author beeme
+ */
 public class Utils {
     public static int salvarBoolean(boolean valor) {
         if(valor = true)
@@ -18,18 +26,20 @@ public class Utils {
             return 0;
     
     }
-
-     public static Icon fileParaIcon(File file) {
-        ImageIcon icon = new ImageIcon(file.getAbsolutePath());
-        return icon;
-        }
-
-    public static ImageIcon redimensionarIcon(Icon originalIcon, int largura, int altura) {
-        Image imageOriginal = ((ImageIcon) originalIcon).getImage();
-        Image novaImagem = imageOriginal.getScaledInstance(largura, altura, Image.SCALE_SMOOTH);
+    
+    public static Icon fileParaIcon (File file) {
+    ImageIcon icon = new ImageIcon(file.getAbsolutePath());
+    return icon;
+    }
+    
+    public static ImageIcon redimensionarIcon (Icon originalIcon,
+            int largura, int altura) {
+        Image imagemOriginal = ((ImageIcon) originalIcon).getImage();
+        Image novaImagem = imagemOriginal.getScaledInstance(
+                largura, altura, Image.SCALE_SMOOTH);
         return new ImageIcon(novaImagem);
     }
-   
+    
     public static byte[] iconToBytes (Icon icon) throws IOException {
         BufferedImage image = new BufferedImage(
                     icon.getIconWidth(),
@@ -43,5 +53,4 @@ public class Utils {
         ImageIO.write(image, "png", byteArrayOutputStream);
         return byteArrayOutputStream.toByteArray();
     }
-    
 }
