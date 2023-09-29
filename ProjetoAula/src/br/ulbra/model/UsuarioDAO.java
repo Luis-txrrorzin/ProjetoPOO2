@@ -1,6 +1,8 @@
 package br.ulbra.model;
 
 import br.ulbra.utils.Utils;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
@@ -11,7 +13,9 @@ import java.util.logging.Level;
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.Connection;
+import javax.imageio.ImageIO;
 import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 
 public class UsuarioDAO {
@@ -135,36 +139,44 @@ public class UsuarioDAO {
     return usuarios;
     }
     
-    public Usuario readForPk(int pk) {
-    String sql = "SELECT * FROM tbusuario WHERE usuario_pk = ?";
+     public Usuario readForPk(int pk) {
+        String sql = "SELECT * FROM tbusuario WHERE usuario_pk = ?";
     GerenciadorConexao gerenciador = GerenciadorConexao.getInstancia();
     Connection con = gerenciador.getConexao();
     PreparedStatement stmt = null;
     ResultSet rs = null;
     Usuario usuario = new Usuario();
+
+         try {
+            stmt = con.prepareStatement(sql);
+            stmt.setInt(1, pk);
     
-    try {
-    stmt = con.prepareStatement(sql);
-    stmt.setInt(1, pk);
-    
-    rs = stmt.executeQuery();
-    
-    while (rs.next()) {
-        usuario.setPk(rs.getInt("usuario_pk"));
-        usuario.setNome(rs.getString("nomeUsu"));
-        usuario.setEmail(rs.getString("emailUsu"));
-        usuario.setSenhaUsu(rs.getString("senhaUsu"));
-        usuario.setData_nascimentoUsu(rs.getString("data_nascimentoUsu"));
-        usuario.setAtivo(rs.getInt("ativoUsu"));
-    }
-    
-    } catch (SQLException ex) {
-        Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
-    } finally {
-        GerenciadorConexao.closeConnection(con, stmt, rs);
-    }
-    
-    return usuario;
+                rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                usuario.setPk(rs.getInt("usuario_pk"));
+                usuario.setNome(rs.getString("nomeUsu"));
+                usuario.setEmail(rs.getString("emailUsu"));
+                usuario.setSenhaUsu(rs.getString("senhaUsu"));
+                usuario.setData_nascimentoUsu(rs.getString("data_nascimentoUsu"));
+                usuario.setAtivo(rs.getInt("ativoUsu"));
+                
+                byte[] bytes = rs.getBytes("imagemUsu");
+                ByteArrayInputStream bis = new ByteArrayInputStream(bytes);
+                BufferedImage imagem = ImageIO.read(bis);
+                
+                usuario.setImagem(new ImageIcon(imagem));
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException e){
+            JOptionPane.showMessageDialog(null, "ERRO: " + e.getMessage());
+        }finally {
+            GerenciadorConexao.closeConnection(con, stmt, rs);
+        }
+
+        return usuario;
     }
     
     public boolean alterarUsuario (Usuario u) {

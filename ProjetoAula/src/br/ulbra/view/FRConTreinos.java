@@ -53,7 +53,6 @@ public class FRConTreinos extends javax.swing.JDialog {
 
         txtConsUsu.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         txtConsUsu.setForeground(new java.awt.Color(0, 0, 0));
-        txtConsUsu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/6643367_diet_dumbbells_exercise_fitness_gym_icon.png"))); // NOI18N
         txtConsUsu.setText("Consulta de Treinos");
 
         btLupa.setBackground(new java.awt.Color(153, 153, 153));
@@ -67,6 +66,11 @@ public class FRConTreinos extends javax.swing.JDialog {
 
         txtFiltro.setBackground(new java.awt.Color(255, 255, 255));
         txtFiltro.setForeground(new java.awt.Color(0, 0, 0));
+        txtFiltro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFiltroActionPerformed(evt);
+            }
+        });
         txtFiltro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtFiltroKeyPressed(evt);
@@ -201,6 +205,10 @@ public class FRConTreinos extends javax.swing.JDialog {
     private void btVoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btVoltarMouseClicked
         this.dispose();
     }//GEN-LAST:event_btVoltarMouseClicked
+
+    private void txtFiltroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFiltroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFiltroActionPerformed
 
     /**
      * @param args the command line arguments
