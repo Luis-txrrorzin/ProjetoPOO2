@@ -1,38 +1,9 @@
 
 package br.ulbra.model;
 
-public class Usuario {
-    private int usuario_pk;
-    private String nomeUsu;
-    private String emailUsu;
+public class Usuario extends Pessoa {
     private String data_nascimentoUsu;
-    private int ativoUsu;
     private String senhaUsu;
-
-    public String getNomeUsu() {
-        return nomeUsu;
-    }
-
-    public void setNomeUsu(String nomeUsu) {
-        this.nomeUsu = nomeUsu;
-    }
-
-    public int getUsuario_pk() {
-        return usuario_pk;
-    }
-    
-    
-    public void setUsuario_pk(int usuario_pk) {
-        this.usuario_pk = usuario_pk;
-    }
-
-    public String getEmailUsu() {
-        return emailUsu;
-    }
-
-    public void setEmailUsu(String emailUsu) {
-        this.emailUsu = emailUsu;
-    }
 
     public String getData_nascimentoUsu() {
         return data_nascimentoUsu;
@@ -42,14 +13,6 @@ public class Usuario {
         this.data_nascimentoUsu = data_nascimentoUsu;
     }
 
-    public int getAtivoUsu() {
-        return ativoUsu;
-    }
-
-    public void setAtivoUsu(int ativoUsu) {
-        this.ativoUsu = ativoUsu;
-    }
-
     public String getSenhaUsu() {
         return senhaUsu;
     }
@@ -57,29 +20,13 @@ public class Usuario {
     public void setSenhaUsu(String senhaUsu) {
         this.senhaUsu = senhaUsu;
     }
-    
-    
-    
-    public String ativoToString() {
-    if (this.ativoUsu == 1)
-        return "Ativo";
-    else
-        return "Inativo";
-    }
+
 
     @Override
     public String toString() {
-        return "Usuario{" + "usuario_pk=" + usuario_pk + ", nomeUsu=" + nomeUsu 
-                + ", emailUsu=" + emailUsu + ", data_nascimentoUsu=" + data_nascimentoUsu 
-                + ", ativoUsu=" + ativoUsu + ", senhaUsu=" + senhaUsu + '}';
-    }
-
-    public void setdata_nascimentoUso(String text) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setPkUsuario(int usuario_pk) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return "Usuario{" + "usuario_pk=" + getPk() + ", nomeUsu=" + getNome() 
+                + ", emailUsu=" + getEmail() + ", data_nascimentoUsu=" + data_nascimentoUsu 
+                + ", ativoUsu=" + getAtivo() + ", senhaUsu=" + senhaUsu + '}';
     }
 
     

@@ -30,15 +30,17 @@ public class FRMenu extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         MICad = new javax.swing.JMenu();
         MICadUsu = new javax.swing.JMenuItem();
-        MICadue = new javax.swing.JMenuItem();
+        miCadTreino = new javax.swing.JMenuItem();
         MICadSair = new javax.swing.JMenuItem();
         MICon = new javax.swing.JMenu();
         MIConUsu = new javax.swing.JMenuItem();
-        MiConsuTreinos = new javax.swing.JMenuItem();
+        miTreinos = new javax.swing.JMenuItem();
+        miCalendario = new javax.swing.JMenuItem();
         MIAju = new javax.swing.JMenu();
         miSobre = new javax.swing.JMenuItem();
 
@@ -47,41 +49,50 @@ public class FRMenu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("[ULBRA]- Menu Principal");
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/Logo.png"))); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Na Garra FC");
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Escola de futebol");
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/Logo.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(268, 268, 268))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(188, 188, 188)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(122, 122, 122)
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(156, 156, 156)
+                        .addComponent(jLabel3)))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(80, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(jLabel4)
+                .addGap(27, 27, 27)
                 .addComponent(jLabel2)
-                .addGap(48, 48, 48))
+                .addGap(30, 30, 30)
+                .addComponent(jLabel3)
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
-        jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
-        jMenuBar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jMenuBar1.setForeground(new java.awt.Color(0, 0, 0));
-
-        MICad.setForeground(new java.awt.Color(0, 0, 0));
         MICad.setText("Cadastros");
 
-        MICadUsu.setText("Jogador");
+        MICadUsu.setText("Usuários");
         MICadUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MICadUsuActionPerformed(evt);
@@ -89,13 +100,13 @@ public class FRMenu extends javax.swing.JFrame {
         });
         MICad.add(MICadUsu);
 
-        MICadue.setText("Treino");
-        MICadue.addActionListener(new java.awt.event.ActionListener() {
+        miCadTreino.setText("Treinos");
+        miCadTreino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MICadueActionPerformed(evt);
+                miCadTreinoActionPerformed(evt);
             }
         });
-        MICad.add(MICadue);
+        MICad.add(miCadTreino);
 
         MICadSair.setText("Sair");
         MICadSair.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +120,7 @@ public class FRMenu extends javax.swing.JFrame {
 
         MICon.setText("Consultas");
 
-        MIConUsu.setText("Jogadores");
+        MIConUsu.setText("Usuários");
         MIConUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MIConUsuActionPerformed(evt);
@@ -117,13 +128,21 @@ public class FRMenu extends javax.swing.JFrame {
         });
         MICon.add(MIConUsu);
 
-        MiConsuTreinos.setText("Consulta de treinos");
-        MiConsuTreinos.addActionListener(new java.awt.event.ActionListener() {
+        miTreinos.setText("Treinos");
+        miTreinos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MiConsuTreinosActionPerformed(evt);
+                miTreinosActionPerformed(evt);
             }
         });
-        MICon.add(MiConsuTreinos);
+        MICon.add(miTreinos);
+
+        miCalendario.setText("Calendario");
+        miCalendario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCalendarioActionPerformed(evt);
+            }
+        });
+        MICon.add(miCalendario);
 
         jMenuBar1.add(MICon);
 
@@ -145,11 +164,11 @@ public class FRMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -171,13 +190,17 @@ public class FRMenu extends javax.swing.JFrame {
         new FRSobre(this, rootPaneCheckingEnabled).setVisible(true);
     }//GEN-LAST:event_miSobreActionPerformed
 
-    private void MICadueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MICadueActionPerformed
-        new FRCadTre(this, rootPaneCheckingEnabled).setVisible(true);
-    }//GEN-LAST:event_MICadueActionPerformed
+    private void miTreinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miTreinosActionPerformed
+        new FRConTreinos(this, rootPaneCheckingEnabled).setVisible(true);
+    }//GEN-LAST:event_miTreinosActionPerformed
 
-    private void MiConsuTreinosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MiConsuTreinosActionPerformed
-        new FRConTre(this, rootPaneCheckingEnabled).setVisible(true);
-    }//GEN-LAST:event_MiConsuTreinosActionPerformed
+    private void miCadTreinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadTreinoActionPerformed
+        new FRCadTreinos(this, rootPaneCheckingEnabled).setVisible(true);
+    }//GEN-LAST:event_miCadTreinoActionPerformed
+
+    private void miCalendarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCalendarioActionPerformed
+        new FRCalendario(this, rootPaneCheckingEnabled).setVisible(true);
+    }//GEN-LAST:event_miCalendarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -220,15 +243,17 @@ public class FRMenu extends javax.swing.JFrame {
     private javax.swing.JMenu MICad;
     private javax.swing.JMenuItem MICadSair;
     private javax.swing.JMenuItem MICadUsu;
-    private javax.swing.JMenuItem MICadue;
     private javax.swing.JMenu MICon;
     private javax.swing.JMenuItem MIConUsu;
-    private javax.swing.JMenuItem MiConsuTreinos;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenuItem miCadTreino;
+    private javax.swing.JMenuItem miCalendario;
     private javax.swing.JMenuItem miSobre;
+    private javax.swing.JMenuItem miTreinos;
     // End of variables declaration//GEN-END:variables
 }

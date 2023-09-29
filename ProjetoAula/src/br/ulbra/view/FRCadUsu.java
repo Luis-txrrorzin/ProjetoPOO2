@@ -36,7 +36,6 @@ public class FRCadUsu extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtNome = new javax.swing.JTextField();
@@ -51,60 +50,48 @@ public class FRCadUsu extends javax.swing.JDialog {
         txtRSenha = new javax.swing.JPasswordField();
         chkAtivo = new javax.swing.JCheckBox();
         BtCancelar = new javax.swing.JButton();
-        Imagem = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        btImagem = new javax.swing.JButton();
+        lbFoto = new javax.swing.JLabel();
+        btEscolherImagem = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Usuários");
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/user.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("NOME:");
 
-        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("CADASTRO ");
+        jLabel3.setText("CADASTRO DO ALUNO:");
 
         txtNome.setBackground(new java.awt.Color(255, 255, 255));
-        txtNome.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        txtNome.setForeground(new java.awt.Color(0, 0, 0));
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("E-MAIL:");
 
         txtEmail.setBackground(new java.awt.Color(255, 255, 255));
-        txtEmail.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        txtEmail.setForeground(new java.awt.Color(0, 0, 0));
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("DATA DE NASCIMENTO:");
 
         txtDtNasc.setBackground(new java.awt.Color(255, 255, 255));
-        txtDtNasc.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        txtDtNasc.setForeground(new java.awt.Color(0, 0, 0));
 
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("SENHA:");
 
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("REPETIR SENHA:");
 
         btSalvar.setBackground(new java.awt.Color(255, 255, 255));
-        btSalvar.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         btSalvar.setForeground(new java.awt.Color(0, 0, 0));
         btSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/save.png"))); // NOI18N
         btSalvar.setText("SALVAR");
-        btSalvar.setBorder(new javax.swing.border.MatteBorder(null));
         btSalvar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btSalvarMouseClicked(evt);
@@ -112,15 +99,10 @@ public class FRCadUsu extends javax.swing.JDialog {
         });
 
         txtSenha.setBackground(new java.awt.Color(255, 255, 255));
-        txtSenha.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        txtSenha.setForeground(new java.awt.Color(0, 0, 0));
 
         txtRSenha.setBackground(new java.awt.Color(255, 255, 255));
-        txtRSenha.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        txtRSenha.setForeground(new java.awt.Color(0, 0, 0));
 
-        chkAtivo.setBackground(new java.awt.Color(204, 204, 204));
-        chkAtivo.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        chkAtivo.setBackground(new java.awt.Color(153, 255, 153));
         chkAtivo.setForeground(new java.awt.Color(0, 0, 0));
         chkAtivo.setText("ATIVO");
         chkAtivo.addActionListener(new java.awt.event.ActionListener() {
@@ -130,11 +112,9 @@ public class FRCadUsu extends javax.swing.JDialog {
         });
 
         BtCancelar.setBackground(new java.awt.Color(255, 255, 255));
-        BtCancelar.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         BtCancelar.setForeground(new java.awt.Color(0, 0, 0));
         BtCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/ulbra/img/backiconnaguentomais.png"))); // NOI18N
         BtCancelar.setText("CANCELAR");
-        BtCancelar.setBorder(new javax.swing.border.MatteBorder(null));
         BtCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtCancelarMouseClicked(evt);
@@ -146,27 +126,12 @@ public class FRCadUsu extends javax.swing.JDialog {
             }
         });
 
-        Imagem.setBackground(new java.awt.Color(255, 255, 255));
-        Imagem.setForeground(new java.awt.Color(0, 0, 0));
-        Imagem.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        lbFoto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("DE JOGADOR:");
-
-        btImagem.setBackground(new java.awt.Color(255, 255, 255));
-        btImagem.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        btImagem.setForeground(new java.awt.Color(0, 0, 0));
-        btImagem.setText("Escolher imagem");
-        btImagem.addMouseListener(new java.awt.event.MouseAdapter() {
+        btEscolherImagem.setText("Escolher Imagem");
+        btEscolherImagem.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btImagemMouseClicked(evt);
-            }
-        });
-        btImagem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btImagemActionPerformed(evt);
+                btEscolherImagemMouseClicked(evt);
             }
         });
 
@@ -175,62 +140,44 @@ public class FRCadUsu extends javax.swing.JDialog {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(41, 41, 41)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtDtNasc, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(BtCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2)
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(18, 18, 18)
-                        .addComponent(chkAtivo, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5)
                     .addComponent(jLabel6)
                     .addComponent(jLabel7)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txtRSenha, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtSenha, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(Imagem, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btImagem))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtRSenha, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                            .addComponent(txtSenha, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(31, 31, 31)
+                        .addComponent(chkAtivo, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btSalvar)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(BtCancelar)
+                        .addComponent(txtDtNasc, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lbFoto, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(jLabel3))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel9)))))
-                .addContainerGap(22, Short.MAX_VALUE))
+                            .addComponent(btEscolherImagem)
+                            .addComponent(jLabel3))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbFoto, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel9)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Imagem, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(btImagem)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel3)
+                        .addGap(67, 67, 67)
+                        .addComponent(btEscolherImagem)))
+                .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -239,24 +186,27 @@ public class FRCadUsu extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(chkAtivo))
+                .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtDtNasc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6)
-                .addGap(12, 12, 12)
-                .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chkAtivo)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtRSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtCancelar)
-                    .addComponent(btSalvar))
-                .addGap(43, 43, 43))
+                    .addComponent(btSalvar)
+                    .addComponent(BtCancelar))
+                .addGap(142, 142, 142))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -267,13 +217,20 @@ public class FRCadUsu extends javax.swing.JDialog {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private boolean verificarCampos() {
+        if(lbFoto.getIcon() == null) {
+        JOptionPane.showMessageDialog(null, "Campo 'Foto' em branco");
+        return false;
+        
+        }
         if (txtNome.getText().equals("")) {
             JOptionPane.showMessageDialog(null,
                     "Campo 'Nome' em branco");
@@ -289,7 +246,7 @@ public class FRCadUsu extends javax.swing.JDialog {
                     "Campo 'Email' em branco");
             return false;
         }
-        if (!txtEmail.getText().matches("^[a-zA-Z._]+@[a-zA-Z._]+")) {
+        if (!txtEmail.getText().matches("^[a-zA-Z._0-9]+@[a-zA-Z._]+")) {
             JOptionPane.showMessageDialog(null,
                     "Campo 'Email' possui formato inválido");
             return false;
@@ -315,16 +272,16 @@ public class FRCadUsu extends javax.swing.JDialog {
     }
     
     
-    private void btSalvarMouseClicked(java.awt.event.MouseEvent evt) {                                      
-//GEN-FIRST:event_btSalvarMouseClicked
-        if(!verificarCampos()){
+    private void btSalvarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btSalvarMouseClicked
+         if(!verificarCampos()){
             return;
         }
         
         UsuarioController controller = new UsuarioController();
         String senha = new String(txtSenha.getPassword());
         if(controller.adicionarUsuario(txtNome.getText(), txtEmail.getText(), senha, 
-                txtDtNasc.getText(), Utils.salvarBoolean(chkAtivo.isSelected()), Imagem.getIcon())){
+                txtDtNasc.getText(), Utils.salvarBoolean(chkAtivo.isSelected())
+        , lbFoto.getIcon())){
             this.dispose();
         };
     }//GEN-LAST:event_btSalvarMouseClicked
@@ -341,26 +298,22 @@ public class FRCadUsu extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_BtCancelarActionPerformed
 
-    private void btImagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btImagemActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btImagemActionPerformed
-
-    private void btImagemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btImagemMouseClicked
+    private void btEscolherImagemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btEscolherImagemMouseClicked
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Escolha um arquivo");
         
         int returnValue = fileChooser.showOpenDialog(null);
         
-        if (returnValue == fileChooser.APPROVE_OPTION) {
-            File arquivo = fileChooser.getSelectedFile();
-            Icon icon = Utils.fileParaIcon(arquivo);
-            
-            ImageIcon iconRedimensionado = Utils.redimensionarIcon(icon, 102, 110);
-            
-            Imagem.setIcon(iconRedimensionado);
-        }
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+        File arquivo = fileChooser.getSelectedFile();
+        Icon icon = Utils.fileParaIcon(arquivo);
         
-    }//GEN-LAST:event_btImagemMouseClicked
+        ImageIcon iconRedimensionado = Utils.redimensionarIcon(
+                icon, 140, 140);
+                
+                lbFoto.setIcon(iconRedimensionado);
+        }
+    }//GEN-LAST:event_btEscolherImagemMouseClicked
 
     /**
      * @param args the command line arguments
@@ -407,19 +360,17 @@ public class FRCadUsu extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtCancelar;
-    private javax.swing.JLabel Imagem;
-    private javax.swing.JButton btImagem;
+    private javax.swing.JButton btEscolherImagem;
     private javax.swing.JButton btSalvar;
     private javax.swing.JCheckBox chkAtivo;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lbFoto;
     private javax.swing.JTextField txtDtNasc;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNome;

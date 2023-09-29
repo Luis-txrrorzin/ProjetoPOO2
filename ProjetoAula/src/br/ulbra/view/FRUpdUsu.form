@@ -8,9 +8,6 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
-  <Events>
-    <EventHandler event="windowActivated" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowActivated"/>
-  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -31,7 +28,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel3" alignment="1" max="32767" attributes="0"/>
+          <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -39,50 +36,68 @@
     <Container class="javax.swing.JPanel" name="jPanel3">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+          <Color blue="99" green="ff" red="99" type="rgb"/>
         </Property>
       </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="txtUsu" min="-2" pref="267" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
-              </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="txtEmailUsu" alignment="0" min="-2" pref="264" max="-2" attributes="0"/>
-                      <Component id="txtRSenhaUsu" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
-                      <Component id="txtRepetirSUsu" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="LabelNome" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="txtNomeUsu" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jLabel18" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="jLabel19" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
-                              <Component id="jLabel20" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="txtDtNascUsu" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtSenhaUsu" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="Txt" alignment="0" min="-2" pref="56" max="-2" attributes="0"/>
-                                  <Component id="txtCodigo" alignment="0" min="-2" pref="184" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txtEmailUsu" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="LabelNome" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="txtNomeUsu" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel18" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="jLabel19" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
+                                  <Component id="jLabel20" alignment="0" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <Component id="txtDtNascUsu" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtSenhaUsu" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="AtivoUsu" min="-2" pref="85" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="btAlterar" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="txtRSenhaUsu" min="-2" pref="105" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="Txt" min="-2" pref="56" max="-2" attributes="0"/>
+                                      <Component id="txtCodigo" min="-2" pref="88" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="btExcluir" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                                          <Component id="btVoltar" min="-2" pref="101" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
                           </Group>
+                          <EmptySpace pref="23" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="btAlterar" min="-2" pref="103" max="-2" attributes="0"/>
-                          <EmptySpace pref="88" max="32767" attributes="0"/>
-                          <Component id="btExcluir" min="-2" pref="100" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="btVoltar" min="-2" pref="122" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="txtRepetirSUsu" min="-2" pref="121" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="AtivoUsu" min="-2" pref="85" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="btAlterarImagem" alignment="1" min="-2" pref="148" max="-2" attributes="0"/>
+                                      <Component id="lbFoto" alignment="1" min="-2" pref="148" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -91,66 +106,55 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="txtUsu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="LabelNome" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="Txt" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="LabelNome" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="txtNomeUsu" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="txtEmailUsu" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="lbFoto" min="-2" pref="135" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtNomeUsu" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btAlterarImagem" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="txtEmailUsu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                  <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtDtNascUsu" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="AtivoUsu" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                  <Component id="txtDtNascUsu" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="txtSenhaUsu" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="txtRSenhaUsu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="txtRepetirSUsu" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txtRSenhaUsu" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Txt" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="txtRepetirSUsu" min="-2" max="-2" attributes="0"/>
+                      <Component id="AtivoUsu" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtCodigo" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="46" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btAlterar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btVoltar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="20" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="txtUsu">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial Black" size="36" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/br/ulbra/img/user.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Jogador"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="LabelNome">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="1"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
@@ -163,8 +167,8 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="0"/>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
           </Properties>
           <Events>
@@ -173,9 +177,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel18">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="1"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
@@ -187,9 +188,6 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="0"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
@@ -200,9 +198,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel19">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="1"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
@@ -211,9 +206,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel20">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="1"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
@@ -224,9 +216,6 @@
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="0"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -241,9 +230,6 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial Black" size="12" style="0"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
@@ -251,11 +237,6 @@
               <Image iconType="3" name="/br/ulbra/img/edit.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="ALTERAR"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                <MatteColorBorder/>
-              </Border>
-            </Property>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btAlterarMouseClicked"/>
@@ -266,9 +247,6 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial Black" size="12" style="0"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
@@ -276,11 +254,6 @@
               <Image iconType="3" name="/br/ulbra/img/trash.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="EXCLUIR"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                <MatteColorBorder/>
-              </Border>
-            </Property>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btExcluirMouseClicked"/>
@@ -288,28 +261,16 @@
         </Component>
         <Component class="javax.swing.JCheckBox" name="AtivoUsu">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="1"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="ATIVO"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AtivoUsuActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JPasswordField" name="txtSenhaUsu">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="0"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -324,9 +285,6 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial Black" size="12" style="0"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
@@ -334,11 +292,6 @@
               <Image iconType="3" name="/br/ulbra/img/backiconnaguentomais.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="VOLTAR"/>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                <MatteColorBorder/>
-              </Border>
-            </Property>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btVoltarMouseClicked"/>
@@ -346,9 +299,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="Txt">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="1"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
@@ -360,8 +310,8 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="0"/>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
           </Properties>
           <Events>
@@ -370,9 +320,6 @@
         </Component>
         <Component class="javax.swing.JLabel" name="txtRSenhaUsu">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="1"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
@@ -384,15 +331,38 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial" size="12" style="0"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtRepetirSUsuActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbFoto">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                <BevelBorder/>
+              </Border>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btAlterarImagem">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="12" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="ALTERAR IMAGEM"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btAlterarImagemMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>
